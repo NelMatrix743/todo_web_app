@@ -20,3 +20,15 @@
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
+
+.todo-entry-point h2 {
+    display: flex;
+    color: #002765;   /* alternative: #A84603 */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-entry-point img {
+    width: 40px;
+    margin-left: 10px;
+}
