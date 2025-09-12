@@ -64,6 +64,11 @@
     cursor: pointer;
 }
 
+.row button:active {
+    background: #ffffff;
+    color: #ff5945;
+}
+
 ul li {
     position: relative;
     list-style: none;
