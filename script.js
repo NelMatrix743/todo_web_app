@@ -10,3 +10,13 @@
 const inputBox = document.getElementById("input-box");
 const taskListContainer = document.getElementById("task-list-container");
 const taskInsertBtn = document.getElementById("insert-task-button");
+
+
+// event callback functions
+
+function createTaskItem(taskText){
+    const taskItem = document.createElement("li");
+    taskItem.innerHTML = taskText;
+    return taskItem;
+}
+
