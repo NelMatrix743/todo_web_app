@@ -20,3 +20,16 @@ function createTaskItem(taskText){
     return taskItem;
 }
 
+function addTask(){
+    if(inputBox.value === ""){
+        alert("Error! You have to enter a task!");
+    } else {
+        const taskListItem = createTaskItem(inputBox.value);
+    }
+}
+
+
+// map elements to callback functions
+
+taskInsertBtn.addEventListener("click", addTask);
+
