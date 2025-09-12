@@ -39,3 +39,11 @@ function addTask(){
 
 taskInsertBtn.addEventListener("click", addTask);
 
+
+// event listener for enter button
+
+document.addEventListener("keydown", (event) => {
+    if(event.key == "Enter"){
+        addTask();
+    }
+});
