@@ -14,6 +14,10 @@ const taskInsertBtn = document.getElementById("insert-task-button");
 
 // event callback functions
 
+function clearInput(){
+    inputBox.value = "";
+}
+
 function createTaskItem(taskText){
     const taskItem = document.createElement("li");
     taskItem.innerHTML = taskText;
@@ -22,9 +26,11 @@ function createTaskItem(taskText){
 
 function addTask(){
     if(inputBox.value === ""){
-        alert("Error! You have to enter a task!");
+        alert("ERROR! YOU HAVE TO ENTER A TASK!");
     } else {
         const taskListItem = createTaskItem(inputBox.value);
+        taskListContainer.appendChild(taskListItem);
+        clearInput();
     }
 }
 
