@@ -42,6 +42,17 @@ function addTask(){
 
 taskInsertBtn.addEventListener("click", addTask);
 
+taskListContainer.addEventListener("click", function(event){
+    switch(event.target.tagName){
+        case "LI":
+            event.target.classList.toggle("checked");
+            break;
+        case "SPAN":
+            event.target.parentElement.remove();
+            break;
+    }
+}, false);
+
 
 // event listener for enter button
 
