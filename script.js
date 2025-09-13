@@ -14,6 +14,14 @@ const taskInsertBtn = document.getElementById("insert-task-button");
 
 // event callback functions
 
+function saveTaskData(){
+    localStorage.setItem("todo_task_data", taskListContainer.innerHTML);
+}
+
+function retrieveTaskData(){
+    taskListContainer.innerHTML = localStorage.getItem("todo_task_data");
+}
+
 function clearInput(){
     inputBox.value = "";
 }
@@ -34,6 +42,7 @@ function addTask(){
         const taskListItem = createTaskItem(inputBox.value);
         taskListContainer.appendChild(taskListItem);
         clearInput();
+        saveTaskData();
     }
 }
 
@@ -51,6 +60,7 @@ taskListContainer.addEventListener("click", function(event){
             event.target.parentElement.remove();
             break;
     }
+    saveTaskData();
 }, false);
 
 
@@ -61,3 +71,10 @@ document.addEventListener("keydown", (event) => {
         addTask();
     }
 });
+
+
+// function calls
+
+retrieveTaskData();
+
+// eosc
