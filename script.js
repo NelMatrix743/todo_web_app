@@ -19,8 +19,11 @@ function clearInput(){
 }
 
 function createTaskItem(taskText){
-    const taskItem = document.createElement("li");
+    let taskItem = document.createElement("li");
     taskItem.innerHTML = taskText;
+    let deleteTask = document.createElement("span");
+    deleteTask.innerHTML = "\u00d7";
+    taskItem.appendChild(deleteTask);
     return taskItem;
 }
 

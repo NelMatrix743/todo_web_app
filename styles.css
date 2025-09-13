@@ -75,7 +75,7 @@ ul li {
     font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 ul li::before {
@@ -98,4 +98,21 @@ ul li.checked {
 
 ul li.checked::before {
     background-image: url(assets/images/checked_icon.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px; 
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: red;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30%;
+}
+
+ul li span:hover {
+    background: #D3D3D3;
 }
